@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="{% static 'assets/images/logo_cancer_care.ico' %}" type="image/x-icon">
+    <title>cancer care</title>
+    <meta name="description" content="Cancer care est une platforme d'information sur le cancer, dote de l'AI qui permet la detection de maladies cancéreuses." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'cancer_caring/style.css' %}" />
+    
+  </head>
+  <body >
+    {% comment %} endle message {% endcomment %}
+   {% if messages %}
+    <div class="messages">
+      {% for message in messages %}
+        <div class="message {{ message.tags }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+        
+ 
+    {% include "cancer_caring/partials/nav_bar.html" %} {% block main %} {% endblock main %} 
+    <div>{%include 'cancer_caring/partials/footer.html' %}
+
+  <script src="{% static 'cancer_caring/script.jsx' %}"">
+</script>
+  </body>
+</html>

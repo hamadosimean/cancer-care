@@ -1,0 +1,23 @@
+{% extends '../partials/base.html' %} {% load static %} {% block main %}
+<div class="form-container">
+  <h1>Connexion</h1>
+  <div class="form-box">
+    <div class="footer-bottom-left">
+      <img src="{% static 'assets/images/hero_bg.png' %}" alt="Inscription" />
+    </div>
+    <form method="post" class="form-right">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="username">Nom d'utilisateur</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button type="submit" class="button">S'inscrire</button>
+    </form>
+  </div>
+</div>
+{% endblock main %}

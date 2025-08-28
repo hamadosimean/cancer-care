@@ -1,0 +1,47 @@
+{% extends '../partials/base.html' %} {% load static %} {% block main %}
+
+<div class="advice-container">
+  <div class="advice">
+    <h1>Conseils pour prévenir et lutter contre le cancer du sein</h1>
+    <p>
+      Voici quelques recommandations pour protéger et améliorer votre santé :
+    </p>
+    <ul>
+      <li>
+        Consultez régulièrement votre médecin pour des examens de contrôle.
+      </li>
+      <li>Effectuez l’auto-examen de vos seins une fois par mois.</li>
+      <li>Participez aux programmes de dépistage recommandés.</li>
+      <li>
+        Maintenez une alimentation équilibrée, riche en fruits, légumes et
+        fibres.
+      </li>
+      <li>
+        Pratiquez une activité physique régulière (au moins 30 minutes par
+        jour).
+      </li>
+      <li>Évitez le tabac et limitez la consommation d’alcool.</li>
+      <li>Maintenez un poids santé et évitez le surpoids.</li>
+      <li>Réduisez le stress et privilégiez le sommeil réparateur.</li>
+      <li>
+        Limitez l’exposition aux produits chimiques nocifs (pesticides,
+        plastiques, etc.).
+      </li>
+      <li>
+        Allaitez si possible, car l’allaitement réduit le risque de cancer du
+        sein.
+      </li>
+      <li>
+        En cas d’antécédents familiaux, parlez à votre médecin pour un suivi
+        personnalisé.
+      </li>
+    </ul>
+  </div>
+  <div>
+    <img
+      src="{% static 'assets/images/advice.png' %}"
+      alt="A doctor and a patiant"
+    />
+  </div>
+</div>
+{% endblock main %}

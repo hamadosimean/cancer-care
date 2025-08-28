@@ -1,0 +1,45 @@
+{% load static %} {% load icons %}
+
+<header class="header">
+  <div class="right-items">
+    <div>
+      <a href="">
+        <img
+          src="{% static 'assets/images/logo_cancer_care.png' %}"
+          alt="logo"
+          class="logo"
+        />
+      </a>
+    </div>
+    <div class="site-title"><a href="">CancerCare</a></div>
+  </div>
+  <nav class="navbar">
+    <ul class="nav-items">
+      <li class="nav-link"><a href="/">Acceuil</a></li>
+      <li class="nav-link"><a href="{% url 'advice' %}">Conseil</a></li>
+      <li class="nav-link"><a href="{% url 'about' %}">A propos</a></li>
+
+      {% if request.user.is_authenticated %}
+      <li class="nav-link user-profile">
+        <a href="{% url 'profile' %}">{{request.user.username}}</a>
+      </li>
+
+      <li class="nav-link">
+        <a href="{% url 'logout' %}">Se deconnecter</a>
+      </li>
+
+      <li class="nav-link .consultation-btn">
+        <a href="{% url 'consultation' %}">Consultation</a>
+      </li>
+
+      {% else %}
+      <li class="nav-link">
+        <a href="{% url 'login' %}">Se connecter</a>
+      </li>
+      <li class="nav-link">
+        <a href="{% url 'register' %}">S'inscrire</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+</header>
