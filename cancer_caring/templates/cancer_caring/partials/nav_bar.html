@@ -1,4 +1,4 @@
-{% load static %} {% load icons %}
+{%load static%} {% load lucide_tags %}
 
 <header class="header">
   <div class="right-items">
@@ -11,11 +11,13 @@
         />
       </a>
     </div>
-    <div class="site-title"><a href="">CancerCare</a></div>
+    <div class="site-title"><a href="/">CancerCare</a></div>
   </div>
   <nav class="navbar">
     <ul class="nav-items">
-      <li class="nav-link"><a href="/">Acceuil</a></li>
+      <li class="nav-link">
+        <a href="/">Acceuil</a>
+      </li>
       <li class="nav-link"><a href="{% url 'advice' %}">Conseil</a></li>
       <li class="nav-link"><a href="{% url 'about' %}">A propos</a></li>
 

@@ -1,11 +1,13 @@
 {% extends '../partials/base.html' %} {% load static %} {% block main %}
 <div class="form-container">
-  <h1>Inscription</h1>
   <div class="form-box">
+    {% comment %}
     <div class="footer-bottom-left">
       <img src="{% static 'assets/images/hero_bg.png' %}" alt="Inscription" />
     </div>
+    {% endcomment %}
     <form method="post" class="form-right">
+      <h1>Inscription</h1>
       {% csrf_token %}
       <div class="form-group">
         <label for="first_name">Prenom</label>

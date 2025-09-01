@@ -9,7 +9,8 @@
     <meta name="description" content="Cancer care est une platforme d'information sur le cancer, dote de l'AI qui permet la detection de maladies cancéreuses." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="{% static 'cancer_caring/style.css' %}" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
   <body >
     {% comment %} endle message {% endcomment %}
@@ -18,8 +19,11 @@
       {% for message in messages %}
         <div class="message {{ message.tags }}">
           {{ message }}
+         <span class="close" onclick="this.parentElement.style.display='none'">fermer</span>
+
         </div>
       {% endfor %}
+
     </div>
   {% endif %}
         

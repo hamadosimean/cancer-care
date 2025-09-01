@@ -1,12 +1,17 @@
 {% extends '../partials/base.html' %} {% load static %} {% block main %}
+
 <div class="form-container">
-  <h1>Connexion</h1>
   <div class="form-box">
+    {% comment %}
     <div class="footer-bottom-left">
-      <img src="{% static 'assets/images/hero_bg.png' %}" alt="Inscription" />
+      <img src="{% static 'assets/images/hero_bg.png' %}" alt="Connexion" />
     </div>
+    {% endcomment %}
+
     <form method="post" class="form-right">
+      <h1>Connexion</h1>
       {% csrf_token %}
+
       <div class="form-group">
         <label for="username">Nom d'utilisateur</label>
         <input type="text" id="username" name="username" required />
@@ -16,8 +21,14 @@
         <label for="password">Mot de passe</label>
         <input type="password" id="password" name="password" required />
       </div>
-      <button type="submit" class="button">S'inscrire</button>
+
+      <button type="submit" class="button">Se connecter</button>
+
+      <div class="login-links">
+        <a href="#">Mot de passe oublié ?</a> | <a href="#">Créer un compte</a>
+      </div>
     </form>
   </div>
 </div>
+
 {% endblock main %}

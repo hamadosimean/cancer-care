@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("App initialized");
-
   // get current year
   const yearSpan = document.getElementById("current-year");
   if (yearSpan) {
